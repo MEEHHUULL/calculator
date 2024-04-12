@@ -50,3 +50,27 @@ body{
 #clear{
     background-color: lightgrey;
 }
+
+.number:hover{
+    background-color: aqua;
+}
+
+.number:active{
+    background-color: red;
+}
+
+.op:hover{
+    background-color: aqua;
+}
+
+.op:active{
+    background-color: red;
+}
+
+#clear:hover{
+    background-color: aqua;
+}
+
+#clear:active{
+    background-color: red;
+}
