@@ -16,7 +16,30 @@ function divide(a,b) {
 
 let a = "" ; 
 let b = "" ; 
-const multiply = 
-const divide = 
-const add = 
-const minus =
+let operator = "";
+
+function operate(){
+    if (operator == adding){
+        return add(a,b);
+    }
+    else if (operator == subbing){
+        return minus(a,b);
+    }
+    else if (operator == multing){
+        return multiply(a,b);
+    }
+    else {
+        return divide(a,b);
+    }
+}
+
+// when op (+-x/) is clicked 
+// the value of the display is stored in a
+// the value of display is reset/cleared
+// the op is stored in operator 
+
+
+// when equals is clikced 
+// the value of the display is stored in b
+// the correct function is called
+// value of display = function output 

@@ -20,30 +20,33 @@ body{
     border: none;
     border-radius: 15px;
     color: rgb(255, 255, 255);
-    text-align: right;
-}
-
-button{
-    border-radius: 50px;
-    background-color: rgb(133, 133, 133);
-    height: 100px;
-    width: 100px;
-    margin: 2px 4px;
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    cursor: pointer;
+    text-align: left;
+    font-size: 40px;
     font-weight: bold;
 }
 
+.number,.op{
+    font-size: 30px;
+    border-radius: 50px;
+    height: 75px;
+    width: 75px;
+    border: none;
+    margin: 20px;
+    font-weight: bold;
+}
+
+#plus,#clear,#eq{
+    width: 175px;
+}
+
 .op{
-    background-color: rgb(227, 131, 74)
+    background-color: rgb(227, 131, 74);
 }
 
-button:hover{
-    background-color: aqua;
+.number{
+    background-color: lightgrey;
 }
 
-button:active{
-    background-color: red;
+#clear{
+    background-color: lightgrey;
 }
