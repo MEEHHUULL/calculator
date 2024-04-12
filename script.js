@@ -43,3 +43,17 @@ function operate(){
 // the value of the display is stored in b
 // the correct function is called
 // value of display = function output 
+
+const number = document.querySelectorAll(".number")
+const display = document.querySelector(".display");
+const clear = document.querySelector("#clear");
+
+clear.addEventListener("click", () => 
+    display.value = ""
+)
+
+number.forEach(function(elem){
+    elem.addEventListener("click" , () => 
+    display.value += elem.value
+)}
+)
