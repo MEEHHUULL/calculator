@@ -1,3 +1,17 @@
+const number = document.querySelectorAll(".number");
+const op = document.querySelectorAll(".op");
+const display = document.querySelector(".display");
+const clear = document.querySelector("#clear");
+const dividing = document.querySelector("#divide");
+const multing = document.querySelector("#times");
+const subbing = document.querySelector("#minus");
+const adding = document.querySelector("#plus");
+
+let a = display.value;
+console.log(a);
+let b = "" ; 
+let operator = "";
+
 function add(a,b) {
     return a + b;
 }
@@ -14,11 +28,7 @@ function divide(a,b) {
     return a / b;
 }
 
-let a = "" ; 
-let b = "" ; 
-let operator = "";
-
-function operate(){
+function operate(a,b,operator){
     if (operator == adding){
         return add(a,b);
     }
@@ -44,10 +54,6 @@ function operate(){
 // the correct function is called
 // value of display = function output 
 
-const number = document.querySelectorAll(".number")
-const display = document.querySelector(".display");
-const clear = document.querySelector("#clear");
-
 clear.addEventListener("click", () => 
     display.value = ""
 )
@@ -59,3 +65,12 @@ number.forEach(function(elem){
 )
 
 
+op.forEach(function(elem){
+    elem.addEventListener("click", () => 
+        display.value = "")
+    elem.addEventListener("click" , () => 
+        display.value = elem.value)
+    elem.addEventListener("click" , () => 
+        a = display.value)  
+}
+)
