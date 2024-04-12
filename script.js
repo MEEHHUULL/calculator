@@ -6,11 +6,11 @@ const dividing = document.querySelector("#divide");
 const multing = document.querySelector("#times");
 const subbing = document.querySelector("#minus");
 const adding = document.querySelector("#plus");
+const eq = document.querySelector("#eq"); 
 
-let a = display.value;
-console.log(a);
+let a = "" ;
 let b = "" ; 
-let operator = "";
+let operator = 0;
 
 function add(a,b) {
     return a + b;
@@ -29,13 +29,13 @@ function divide(a,b) {
 }
 
 function operate(a,b,operator){
-    if (operator == adding){
+    if (operator === "adding"){
         return add(a,b);
     }
-    else if (operator == subbing){
+    else if (operator === "subbing"){
         return minus(a,b);
     }
-    else if (operator == multing){
+    else if (operator === "multing"){
         return multiply(a,b);
     }
     else {
@@ -64,13 +64,33 @@ number.forEach(function(elem){
 )}
 )
 
-
 op.forEach(function(elem){
-    elem.addEventListener("click", () => 
-        display.value = "")
-    elem.addEventListener("click" , () => 
-        display.value = elem.value)
-    elem.addEventListener("click" , () => 
-        a = display.value)  
+    elem.addEventListener("click", () => {
+        a = Number(display.value);
+        display.value = "";
+    }
+    )
 }
 )
+
+eq.addEventListener("click", () => {
+    b = Number(display.value);
+    display.value = operate(a,b,operator);
+})
+
+adding.addEventListener("click" , () => {
+    operator = "adding";
+}) 
+
+subbing.addEventListener("click" , () => {
+    operator = "subbing";
+}) 
+
+multing.addEventListener("click" , () => {
+    operator = "multing";
+}) 
+
+dividing.addEventListener("click" , () => {
+    operator = "dividing";
+}) 
+
