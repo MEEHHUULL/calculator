@@ -25,7 +25,7 @@ body{
     font-weight: bold;
 }
 
-.number,.op{
+.number,.op,.eq,.clear{
     font-size: 30px;
     border-radius: 50px;
     height: 75px;
@@ -39,15 +39,11 @@ body{
     width: 175px;
 }
 
-.op{
+.op,.eq{
     background-color: rgb(227, 131, 74);
 }
 
-.number{
-    background-color: lightgrey;
-}
-
-#clear{
+.number,.clear{
     background-color: lightgrey;
 }
 
@@ -72,5 +68,13 @@ body{
 }
 
 #clear:active{
+    background-color: red;
+}
+
+.eq:hover{
+    background-color: aqua;
+}
+
+.eq:active{
     background-color: red;
 }
